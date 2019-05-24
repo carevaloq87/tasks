@@ -1,0 +1,22 @@
+[
+    {
+        "model-name": "Dutties",
+        "resource-file": "dutties.json",
+        "table-name": "dutties"
+    },
+    {
+        "model-name": "Schedules",
+        "resource-file": "schedules.json",
+        "table-name": "schedules"
+    },
+    {
+        "model-name": "Users",
+        "resource-file": "users.json",
+        "table-name": "users"
+    },
+    {
+        "model-name": "Homes",
+        "resource-file": "homes.json",
+        "table-name": "homes"
+    }
+]
