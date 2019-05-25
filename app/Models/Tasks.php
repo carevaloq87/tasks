@@ -55,13 +55,13 @@ class Tasks extends Model
     protected $casts = [];
     
     /**
-     * Get the Dutty for this model.
+     * Get the Dutties for this model.
      *
-     * @return App\Models\Dutty
+     * @return App\Models\Dutties
      */
-    public function Dutty()
+    public function Dutties()
     {
-        return $this->belongsTo('App\Models\Dutty','duttie_id','id');
+        return $this->belongsTo('App\Models\Dutties','duttie_id','id');
     }
 
 

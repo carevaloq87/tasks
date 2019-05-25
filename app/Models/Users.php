@@ -81,7 +81,7 @@ class Users extends Model
      */
     public function getEmailVerifiedAtAttribute($value)
     {
-        return \DateTime::createFromFormat($this->getDateFormat(), $value)->format('j/n/Y g:i A');
+        //return \DateTime::createFromFormat($this->getDateFormat(), $value)->format('j/n/Y g:i A');
     }
 
     /**
@@ -92,7 +92,7 @@ class Users extends Model
      */
     public function getCreatedAtAttribute($value)
     {
-        return \DateTime::createFromFormat($this->getDateFormat(), $value)->format('j/n/Y g:i A');
+        //return \DateTime::createFromFormat($this->getDateFormat(), $value)->format('j/n/Y g:i A');
     }
 
     /**
@@ -103,7 +103,7 @@ class Users extends Model
      */
     public function getUpdatedAtAttribute($value)
     {
-        return \DateTime::createFromFormat($this->getDateFormat(), $value)->format('j/n/Y g:i A');
+        //return \DateTime::createFromFormat($this->getDateFormat(), $value)->format('j/n/Y g:i A');
     }
 
 }

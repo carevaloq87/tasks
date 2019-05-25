@@ -42,12 +42,16 @@
                     <thead>
                         <tr>
 
-                            <th></th>
+                            <th>Name</th>
+                            <th>Options</th>
                         </tr>
                     </thead>
                     <tbody>
                     @foreach($tasksObjects as $tasks)
                         <tr>
+                            <td>
+                                {{ $tasks->name }}
+                            </td>
 
                             <td>
 
@@ -71,7 +75,7 @@
                                 </form>
                                 
                             </td>
-                        </tr>
+                        </td>
                     @endforeach
                     </tbody>
                 </table>

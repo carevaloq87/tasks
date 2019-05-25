@@ -17,6 +17,10 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
@@ -49,6 +53,13 @@
                                 </li>
                             @endif
                         @else
+                        
+                            <li class="nav-item"><a class="nav-link" href="/homes">Homes</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/users">Users</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/dutties">Dutties</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/schedules">Schedules</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/tasks">Tasks</a></li>
+                            
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -72,9 +83,9 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <div class="container py-4">
             @yield('content')
-        </main>
+        </div>
     </div>
 </body>
 </html>

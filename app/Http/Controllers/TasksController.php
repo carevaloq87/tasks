@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\Dutty;
+use App\Models\Dutties;
 use App\Models\Tasks;
 use Illuminate\Http\Request;
 use Exception;
@@ -30,7 +30,7 @@ class TasksController extends Controller
      */
     public function create()
     {
-        $Dutties = Dutty::pluck('id','id')->all();
+        $Dutties = Dutties::pluck('name','id')->all();
         
         return view('tasks.create', compact('Dutties'));
     }
@@ -68,7 +68,7 @@ class TasksController extends Controller
      */
     public function show($id)
     {
-        $tasks = Tasks::with('dutty')->findOrFail($id);
+        $tasks = Tasks::with('dutties')->findOrFail($id);
 
         return view('tasks.show', compact('tasks'));
     }
@@ -83,7 +83,7 @@ class TasksController extends Controller
     public function edit($id)
     {
         $tasks = Tasks::findOrFail($id);
-        $Dutties = Dutty::pluck('id','id')->all();
+        $Dutties = Dutties::pluck('id','id')->all();
 
         return view('tasks.edit', compact('tasks','Dutties'));
     }
